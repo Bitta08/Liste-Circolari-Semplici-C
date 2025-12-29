@@ -1,4 +1,4 @@
-// Mattia Bittante - 29/12/2025 - version 1.0 - italian
+// Mattia Bittante - 29/12/2025 - version 1.1 - italian
 
 #ifndef CIRCULARLIST_H
 #define CIRCULARLIST_H
@@ -33,6 +33,8 @@ lista cl_delCoda(lista coda);
 lista cl_delEleLista(lista coda, int pos);
 int cl_nodoIncluso(lista coda, puntaNodo A);
 int cl_datoIncluso(lista coda, int valore);
+int cl_isVuota(lista coda);
+int cl_posizione(lista coda, int valore);
 void cl_swapDato(lista coda, puntaNodo A, puntaNodo B);
 lista cl_bubbleSortLista(lista coda);
 lista cl_copiaLista(lista coda);

@@ -1,4 +1,4 @@
-// Mattia Bittante - 28/12/2025 - version 1.0 - italian
+// Mattia Bittante - 29/12/2025 - version 1.1 - italian
 
 #include "circularList.h"
 
@@ -212,6 +212,28 @@ int cl_datoIncluso(lista coda, int valore)
   }while(corrente != coda->next);
   
   return 0;
+}
+
+int cl_isVuota(lista coda)
+{
+  if(coda == NULL) return 1;
+  else return 0;
+}
+
+int cl_posizione(lista coda, int valore)
+{
+  if(coda == NULL) return -2;
+  puntaNodo corrente = coda->next;
+  int pos=0;
+
+  do
+  {
+    if(corrente->dato == valore) return pos;
+    corrente = corrente->next;
+    pos++;
+  }while(corrente != coda->next);
+
+  return -1;
 }
 
 void cl_swapDato(lista coda, puntaNodo A, puntaNodo B)

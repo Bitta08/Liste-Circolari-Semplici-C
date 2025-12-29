@@ -2,7 +2,7 @@
 
 **Autore:** Mattia Bittante
 
-**Versione:** 1.0
+**Versione:** 1.1
 
 **Data:** 29/12/2025
 
@@ -491,6 +491,51 @@ Verifica se un determinato valore è presente nella lista circolare.
 
 ```c
 isIncluded = cl_datoIncluso(miaLista, 7);
+```
+
+---
+
+### `int cl_isVuota(lista testa);`
+
+Verifica se una lista è vuota.
+
+**Parametri:**
+
+* **`lista testa`**: la lista da verificare
+
+**Ritorno:**
+
+* **`1`**: Se la lista è vuota.
+* **`0`**: Se la lista non è vuota.
+
+**Esempio di utilizzo:**
+
+```c
+if(cl_isVuota(miaLista)) printf("lista vuota");
+```
+
+---
+
+### `int cl_posizione(lista testa, int valore);`
+
+Restituisce la posizione della prima occorrenza del valore dato.
+
+**Parametri:**
+
+* **`lista testa`**: la lista dove cercare.
+* **`int valore`**: il numero da cercare.
+
+**Ritorno:**
+
+* la **posizione** del valore nella lista.
+* **`-1`**: Se il valore non è presente nella lista.
+* **`-2`**: Se la lista è vuota.
+
+**Esempio di utilizzo:**
+
+```c
+int pos = cl_posizione(miaLIsta,3);
+printf("3 è il %d della lista",pos+1);
 ```
 
 ---
