@@ -66,6 +66,8 @@ lista cl_riempiRnd(lista coda, int dim, int range, int min, int div)
     int i, r, v;
     int valoriOccupati = 0; //valori del range già presenti nella lista
 
+    if (range <= 0 || dim <= 0) return coda;
+
     if (div == 1) 
     {
         for (v=min; v<min+range; v++) 
