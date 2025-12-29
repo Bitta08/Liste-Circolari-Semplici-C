@@ -1,4 +1,4 @@
-// Mattia Bittante - 29/12/2025 - version 1.1 - italian
+// Mattia Bittante - 29/12/2025 - version 1.2 - italian
 
 #ifndef CIRCULARLIST_H
 #define CIRCULARLIST_H
@@ -27,6 +27,8 @@ lista cl_aggiungiInMezzo(lista coda, int valore, int pos);
 lista cl_aggiungiInCoda(lista coda, int valore);
 lista cl_riempiRnd(lista coda, int dim, int range, int min, int div);
 void cl_stampaLista(lista coda);
+int cl_intInput();
+lista cl_riempiManuale(lista coda, int dim);
 lista cl_delLista(lista coda);
 lista cl_delTesta(lista coda);
 lista cl_delCoda(lista coda);

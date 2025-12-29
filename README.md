@@ -2,7 +2,7 @@
 
 **Autore:** Mattia Bittante
 
-**Versione:** 1.1
+**Versione:** 1.2
 
 **Data:** 29/12/2025
 
@@ -334,6 +334,50 @@ cl_stampaLista(miaLista);
 * Se `div = 1`, la funzione utilizza `cl_datoIncluso`, il quale scorre l'intera lista circolare per ogni nuovo numero.
 * I numeri generati vengono inseriti nella lista tramite `cl_aggiungiInCoda`.
 * Se non esistono abbastanza numeri univoci, vengono inseriti finché disponibili, poi vengono accettati duplicati.
+
+---
+
+### `int cl_intInput();`
+
+Legge un input intero da tastiera, garantendo che il programma non vada in crash o in loop infinito se vengono inseriti caratteri non numerici.
+
+**Funzionamento:**
+
+* Svuota il buffer di input a ogni tentativo.
+* Gestisce correttamente il segno negativo (`-`) solo se posto all'inizio.
+* Richiede nuovamente l'inserimento finché non viene digitato un numero intero valido.
+
+**Ritorno:**
+
+* Il valore **intero** inserito dall'utente.
+* **`0`**: In caso di terminazione forzata dell'input.
+
+**Esempio di utilizzo:**
+
+```c
+int n = intInput();
+```
+
+---
+
+### `lista cl_riempiManuale(lista testa, int dim);`
+
+Permette il popolamento di una lista tramite inserimenti manuali da parte dell'utente per un numero definito di volte.
+
+**Parametri:**
+
+* **`lista testa`**: La testa della lista (può essere `NULL`).
+* **`int dim`**: Il numero di elementi da inserire.
+
+**Ritorno:**
+
+* La **nuova testa** della lista aggiornata.
+
+**Esempio di utilizzo:**
+
+```c
+miaLista = cl_riempiManuale(miaLista, 5);
+```
 
 ---
 
